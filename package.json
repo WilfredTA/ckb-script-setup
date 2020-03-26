@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@nervosnetwork/ckb-sdk-core": "^0.29.1",
+    "molecule-javascript": "^0.1.5",
+    "npx": "^10.2.2"
+  },
+  "scripts": {
+    "build-schema": "moleculec --language - --format json --schema-file ./shared/schema/blockchain.mol > ./shared/schema/blockchain.json",
+    "moleculec-es": "~/Downloads/moleculec-es_0.1.1_Darwin_x86_64_3/moleculec-es -inputFile './shared/schema/blockchain.json' -outputFile './shared/schema/blockchain-es.mjs'",
+    "generate-js-schema": "npm run build-schema && npm run moleculec-es"
+  },
+  "type":"module"
+
+}
